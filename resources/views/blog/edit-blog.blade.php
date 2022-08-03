@@ -6,7 +6,6 @@
 
 	<style>
 		form {
-		   margin-right: 487px;
 		   margin-top: 27px;
 		}
 
@@ -14,7 +13,7 @@
 		    margin-top: 40px;
 		}
 			</style>
-  <title>Bootstrap Example</title>
+  <title></title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
@@ -29,7 +28,7 @@
 	@section('blog')
 
 <div class="container">
-  <h2>Blog Form</h2>
+  <h2> Edit Blog Form</h2>
   <form action="{{route('blog.update-edit-blog')}}" method="POST" id="blog">
     
     @csrf

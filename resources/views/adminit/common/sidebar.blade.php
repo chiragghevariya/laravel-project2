@@ -49,10 +49,10 @@
           <li class="nav-header">EXAMPLES</li>
           
           <li class="nav-item">
-            <a href="" class="nav-link">
+            <a href="{{route('newslater.listing-newslater')}}" class="nav-link">
               <i class="nav-icon far fa-image"></i>
               <p>
-                User
+                news later
               </p>
             </a>
           </li>
