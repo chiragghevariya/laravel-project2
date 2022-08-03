@@ -25,7 +25,8 @@ Route::post('adminlt/saveblog','\App\Http\Controllers\Blogcontroller@savecreate'
 
 Route::get('adminlt/blog','\App\Http\Controllers\Blogcontroller@listing')->name('blog.listing-blog');
 
-Route::get('adminlt/blog','\App\Http\Controllers\Blogcontroller@listing')->name('blog.listing-blog');
-
 Route::get('adminlt/{id}/edit','\App\Http\Controllers\Blogcontroller@edit')->name('blog.edit-blog');
 
+Route::post('adminlt/update-edit','\App\Http\Controllers\Blogcontroller@update')->name('blog.update-edit-blog');
+
+Route::get('adminlt/{id}/delete','\App\Http\Controllers\Blogcontroller@delete')->name('blog.delete-blog');

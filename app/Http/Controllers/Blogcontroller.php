@@ -36,4 +36,23 @@ class Blogcontroller extends Controller
 
         return view('blog.edit-blog',compact('geteditdata'));
     }
+
+    public function update(Request $request){
+        
+     $obj = \App\Models\Blog::where('id',$request->blog)->first();
+     $obj->title = $request->title;
+     $obj->description = $request->description;
+     $obj->status = $request->status;
+          /**database field name/form name**/  
+     $obj->save();
+        return redirect()->route('blog.listing-blog');
+    }
+
+    public function delete($parameterID){
+
+     $obj = \App\Models\Blog::where('id',$parameterID)->first();
+     $obj->delete();
+
+     return redirect()->route('blog.listing-blog');
+}
 }

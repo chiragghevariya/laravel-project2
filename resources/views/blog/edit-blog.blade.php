@@ -30,7 +30,7 @@
 
 <div class="container">
   <h2>Blog Form</h2>
-  <form action="{{route('blog.blog-save-form')}}" method="POST" id="blog">
+  <form action="{{route('blog.update-edit-blog')}}" method="POST" id="blog">
     
     @csrf
 

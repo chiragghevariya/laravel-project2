@@ -60,7 +60,8 @@ td {
         @endif
     </td>
       <td>
-        <a href="{{route('blog.edit-blog',$v->id)}}">Edit</a>   <a href="">Delete</a>
+        <a href="{{route('blog.edit-blog',$v->id)}}">Edit</a>   
+        <a href="{{route('blog.delete-blog',$v->id)}}">Delete</a>
       </td>
     </tr>
 
