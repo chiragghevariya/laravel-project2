@@ -66,6 +66,24 @@
               </p>
             </a>
           </li>
+
+          <li class="nav-item">
+            <a href="{{route('service.listing-service')}}" class="nav-link">
+              <i class="nav-icon far fa-image"></i>
+              <p>
+               Service 
+              </p>
+            </a>
+          </li>
+
+          <li class="nav-item">
+            <a href="{{route('testimonial.listing-testimonial')}}" class="nav-link">
+              <i class="nav-icon far fa-image"></i>
+              <p>
+               Testimonial 
+              </p>
+            </a>
+          </li>
          
          
 

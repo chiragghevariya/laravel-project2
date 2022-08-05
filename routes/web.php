@@ -33,6 +33,7 @@ Route::post('adminlt/update-edit','\App\Http\Controllers\Blogcontroller@update')
 Route::get('adminlt/{id}/delete','\App\Http\Controllers\Blogcontroller@delete')->name('blog.delete-blog');
 
 // newslater
+
 Route::get('adminlt/newslater','\App\Http\Controllers\Newslatercontroller@listing')->name('newslater.listing-newslater');
 
 Route::get('adminlt/createnewslater','\App\Http\Controllers\Newslatercontroller@create')->name('newslater.add-newslater');
@@ -44,3 +45,25 @@ Route::get('adminlt/{id}/editnewslater','\App\Http\Controllers\Newslatercontroll
 Route::post('adminlt/update-editnewslater','\App\Http\Controllers\Newslatercontroller@update')->name('newslater.update-edit-newslater');
 
 Route::get('adminlt/{id}/deletenewslater','\App\Http\Controllers\Newslatercontroller@delete')->name('newslater.delete-newslater');
+
+// service
+
+Route::get('adminlt/service','\App\Http\Controllers\Servicecontroller@listing')->name('service.listing-service');
+
+Route::get('adminlt/createservice','\App\Http\Controllers\Servicecontroller@create')->name('service.add-service');
+
+Route::post('adminlt/save-createservice','\App\Http\Controllers\Servicecontroller@savecreate')->name('service.save-add-service');
+
+Route::get('adminlt/{id}/edit-service','\App\Http\Controllers\Servicecontroller@edit')->name('service.edit-service');
+
+Route::post('adminlt/save-edit-service','\App\Http\Controllers\Servicecontroller@update')->name('service.save-edit-service');
+
+Route::get('adminlt/{id}/delete-service','\App\Http\Controllers\Servicecontroller@delete')->name('service.delete-service');
+
+// testimonial
+
+Route::get('adminlt/testimonial','\App\Http\Controllers\Testimonialcontroller@listing')->name('testimonial.listing-testimonial');
+
+Route::get('adminlt/createtestimonial','\App\Http\Controllers\Testimonialcontroller@create')->name('testimonial.add-testimonial');
+
+Route::post('adminlt/savecreatetestimonial','\App\Http\Controllers\Testimonialcontroller@savecreate')->name('testimonial.save-add-testimonial');
