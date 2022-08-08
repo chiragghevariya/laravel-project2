@@ -17,6 +17,9 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+
+Route::get('front','\App\Http\Controllers\Homecontroller@index')->name('homepage');
+
 Route::get('adminlt','\App\Http\Controllers\Adminltcontroller@index')->name('adminlt');
 
 // blog
@@ -67,3 +70,46 @@ Route::get('adminlt/testimonial','\App\Http\Controllers\Testimonialcontroller@li
 Route::get('adminlt/createtestimonial','\App\Http\Controllers\Testimonialcontroller@create')->name('testimonial.add-testimonial');
 
 Route::post('adminlt/savecreatetestimonial','\App\Http\Controllers\Testimonialcontroller@savecreate')->name('testimonial.save-add-testimonial');
+
+Route::get('adminlt/{id}/edit-testimonial','\App\Http\Controllers\Testimonialcontroller@edit')->name('testimonial.edit-testimonial');
+
+Route::post('adminlt/save-edit-testimonial','\App\Http\Controllers\Testimonialcontroller@update')->name('testimonial.save-edit-testimonial');
+
+Route::get('adminlt/{id}delete-testimonial','\App\Http\Controllers\Testimonialcontroller@delete')->name('testimonial.delete-testimonial');
+
+// Footer
+
+Route::get('adminlt/footer','\App\Http\Controllers\Footercontroller@listing')->name('footer.listing-footer');
+
+Route::get('adminlt/createfooter','\App\Http\Controllers\Footercontroller@create')->name('footer.add-footer');
+
+Route::post('adminlt/save-createfooter','\App\Http\Controllers\Footercontroller@savecreate')->name('footer.save-add-footer');
+
+Route::get('adminlt/{id}/editfooter','\App\Http\Controllers\Footercontroller@edit')->name('footer.edit-footer');
+
+Route::post('adminlt/update-footer','\App\Http\Controllers\Footercontroller@update')->name('footer.save-edit-footer');
+
+Route::get('adminlt/{id}/deletefooter','\App\Http\Controllers\Footercontroller@delete')->name('footer.delete-footer');
+
+// social media
+
+Route::get('adminlt/social-media','\App\Http\Controllers\Socialmediacontroller@listing')->name('social.listing-social');
+
+Route::get('adminlt/create-social-media','\App\Http\Controllers\Socialmediacontroller@create')->name('social.add-social');
+
+Route::post('adminlt/save-create-social-media','\App\Http\Controllers\Socialmediacontroller@savecreate')->name('social.save-add-social');
+
+Route::get('adminlt/{id}/edit-social-media','\App\Http\Controllers\Socialmediacontroller@edit')->name('social.edit-social');
+
+Route::post('adminlt/update-social-media','\App\Http\Controllers\Socialmediacontroller@update')->name('social.save-edit-social');
+
+Route::get('adminlt/{id}/delete-social-media','\App\Http\Controllers\Socialmediacontroller@delete')->name('social.delete-social');
+
+
+
+
+
+
+
+
+

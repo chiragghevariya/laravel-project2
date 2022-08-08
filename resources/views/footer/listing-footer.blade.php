@@ -34,10 +34,10 @@ a {
 <body>
 
 @section('blog')
-<h2>Testimonial listing</h2>
+<h2>Footer listing</h2>
 
 <div style="margin-top:20px; margin-bottom:40px;">
-  <a href="{{route('testimonial.add-testimonial')}}"><h4>Add Testimonial Record</h4></a>
+  <a href="{{route('footer.add-footer')}}"><h4>Add footer Record</h4></a>
 </div>
 
 <table>
@@ -45,19 +45,19 @@ a {
   <tr>
     <th>Id</th>
     <th>Title</th>
-    <th>Description</th>
+    <th>Link</th>
     <th>Status</th>
     <th>Action</th>
   </tr>
 
-  @if(isset($getalltestimonial) && !$getalltestimonial->isEmpty())
+  @if(isset($getallfooter) && !$getallfooter->isEmpty())
 
-    @foreach($getalltestimonial as $key=>$v)
+    @foreach($getallfooter as $key=>$v)
 
     <tr>
       <td>{{$v->id}}</td> <!-- database name -->
       <td>{{$v->title}}</td>
-      <td>{{$v->description}}</td>
+      <td>{{$v->link}}</td>
       <td>
       	@if($v->status == 1)
       	  active
@@ -66,8 +66,8 @@ a {
         @endif
     </td>
       <td>
-        <a href="{{route('testimonial.edit-testimonial',$v->id)}}">Edit</a>   
-        <a href="{{route('testimonial.delete-testimonial',$v->id)}}">Delete</a>
+        <a href="{{route('footer.edit-footer',$v->id)}}">Edit</a>   
+        <a href="{{route('footer.delete-footer',$v->id)}}">Delete</a>
       </td>
     </tr>
 
@@ -77,12 +77,12 @@ a {
 
 </table>
 
-  @if(isset($getalltestimonial) && !$getalltestimonial->isEmpty())
+  @if(isset($getallfooter) && !$getallfooter->isEmpty())
 
 <div style="margin-top: 40px; text-align: center;">
   
-    <!-- {!! $getalltestimonial->links() !!} -->
-    {!! $getalltestimonial->render() !!}              <!-- for pagination -->
+    <!-- {!! $getallfooter->links() !!} -->
+    {!! $getallfooter->render() !!}              <!-- for pagination -->
 
 </div>
     

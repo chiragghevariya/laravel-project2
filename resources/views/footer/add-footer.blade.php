@@ -28,50 +28,48 @@
 	@section('blog')
 
 <div class="container">
-  <h2>Testimonial Form</h2>
-  <form action="{{route('testimonial.save-edit-testimonial')}}" method="POST" id="testimonial">
+  <h2>Footer Form</h2>
+  <form action="{{route('footer.save-add-footer')}}" method="POST" id="footer">
     
     @csrf
-
-    <input type="hidden" value="{{$editdata->id}}" id="testimonial" name="testimonial">
 
    
     <div class="form-group">
       <label >Title:</label>
-      <input type="text" class="form-control" value="{{$editdata->title}}" id="title" placeholder="Enter title" name="title">
+      <input type="text" class="form-control" id="title" placeholder="Enter title" name="title">
     </div>
 
     <div class="form-group">
-      <label >Description:</label>
-      <input type="text" class="form-control" value="{{$editdata->description}}" id="description" placeholder="Enter description" name="description">
+      <label >Link:</label>
+      <input type="link" class="form-control" id="link" placeholder="Enter link" name="link">
     </div>
 
    <div class="form-group">
     <label >Status:</label>
     <select class="form-control"  name="status" id="status">
       <option value="">select status</option>
-      <option value="1" @if($editdata->status == 1) selected @endif >Active</option>
-      <option value="2" @if($editdata->status == 2) selected @endif >Inactive</option>
+      <option value="1">Active</option>
+      <option value="2">Inactive</option>
     </select>
    </div>
 
     <button type="submit" class="btn btn-primary">Submit</button>
-      <a href="{{route('testimonial.listing-testimonial')}}" class="btn btn-danger">Cancle</a>
+      <a href="{{route('footer.listing-footer')}}" class="btn btn-danger">Cancle</a>
 </form>
 </div>
 
 <script>
 
   $(document).ready(function() {
-    $("#testimonial").validate({
+    $("#footer").validate({
       rules: { 
         title: {required:true},
-        description:  {required: true},
+        link:  {required: true},
         status:  {required: true},
       },
       messages: {
         title: { required: "this field is required."},
-        description: { required: "this field is required.."},
+        link: { required: "this field is required.."},
         status: { required: "this field is required.."},
      }
     });

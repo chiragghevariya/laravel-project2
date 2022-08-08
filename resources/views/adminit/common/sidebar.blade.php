@@ -84,6 +84,24 @@
               </p>
             </a>
           </li>
+
+            <li class="nav-item">
+            <a href="{{route('footer.listing-footer')}}" class="nav-link">
+              <i class="nav-icon far fa-image"></i>
+              <p>
+               Footer 
+              </p>
+            </a>
+          </li>
+         
+         <li class="nav-item">
+            <a href="{{route('social.listing-social')}}" class="nav-link">
+              <i class="nav-icon far fa-image"></i>
+              <p>
+               Social-media 
+              </p>
+            </a>
+          </li>
          
          
 

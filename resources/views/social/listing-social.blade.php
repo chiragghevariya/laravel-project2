@@ -34,10 +34,10 @@ a {
 <body>
 
 @section('blog')
-<h2>Testimonial listing</h2>
+<h2>Social-media listing</h2>
 
 <div style="margin-top:20px; margin-bottom:40px;">
-  <a href="{{route('testimonial.add-testimonial')}}"><h4>Add Testimonial Record</h4></a>
+  <a href="{{route('social.add-social')}}"><h4>Add social Record</h4></a>
 </div>
 
 <table>
@@ -45,19 +45,21 @@ a {
   <tr>
     <th>Id</th>
     <th>Title</th>
-    <th>Description</th>
+    <th>Link</th>
+    <th>icon</th>
     <th>Status</th>
     <th>Action</th>
   </tr>
 
-  @if(isset($getalltestimonial) && !$getalltestimonial->isEmpty())
+  @if(isset($getallsocial) && !$getallsocial->isEmpty())
 
-    @foreach($getalltestimonial as $key=>$v)
+    @foreach($getallsocial as $key=>$v)
 
     <tr>
       <td>{{$v->id}}</td> <!-- database name -->
       <td>{{$v->title}}</td>
-      <td>{{$v->description}}</td>
+      <td>{{$v->link}}</td>
+      <td>{{$v->icon}}</td>
       <td>
       	@if($v->status == 1)
       	  active
@@ -66,8 +68,8 @@ a {
         @endif
     </td>
       <td>
-        <a href="{{route('testimonial.edit-testimonial',$v->id)}}">Edit</a>   
-        <a href="{{route('testimonial.delete-testimonial',$v->id)}}">Delete</a>
+        <a href="{{route('social.edit-social',$v->id)}}">Edit</a>   
+        <a href="{{route('social.delete-social',$v->id)}}">Delete</a>
       </td>
     </tr>
 
@@ -77,12 +79,12 @@ a {
 
 </table>
 
-  @if(isset($getalltestimonial) && !$getalltestimonial->isEmpty())
+  @if(isset($getallsocial) && !$getallsocial->isEmpty())
 
 <div style="margin-top: 40px; text-align: center;">
   
-    <!-- {!! $getalltestimonial->links() !!} -->
-    {!! $getalltestimonial->render() !!}              <!-- for pagination -->
+    <!-- {!! $getallsocial->links() !!} -->
+    {!! $getallsocial->render() !!}              <!-- for pagination -->
 
 </div>
     
