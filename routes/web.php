@@ -18,7 +18,7 @@ Route::get('/', function () {
 });
 
 
-Route::get('front','\App\Http\Controllers\Homecontroller@index')->name('homepage');
+Route::get('/','\App\Http\Controllers\Homecontroller@index')->name('homepage');
 
 Route::get('adminlt','\App\Http\Controllers\Adminltcontroller@index')->name('adminlt');
 
@@ -105,6 +105,15 @@ Route::post('adminlt/update-social-media','\App\Http\Controllers\Socialmediacont
 
 Route::get('adminlt/{id}/delete-social-media','\App\Http\Controllers\Socialmediacontroller@delete')->name('social.delete-social');
 
+// homepage
+
+Route::post('front/save-email','\App\Http\Controllers\Homecontroller@savecreate')->name('frontemail');
+
+// setting
+
+Route::get('adminlt/setting','\App\Http\Controllers\Settingcontroller@create')->name('setting.add');
+
+Route::post('adminlt/setting-update','\App\Http\Controllers\Settingcontroller@update')->name('setting.update-add');
 
 
 

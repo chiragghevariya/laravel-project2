@@ -102,6 +102,15 @@
               </p>
             </a>
           </li>
+
+          <li class="nav-item">
+            <a href="{{route('setting.add')}}" class="nav-link">
+              <i class="nav-icon far fa-image"></i>
+              <p>
+               Setting 
+              </p>
+            </a>
+          </li>
          
          
 
